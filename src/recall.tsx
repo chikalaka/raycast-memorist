@@ -12,10 +12,11 @@ import { Item } from "./types/types"
 import Remember from "./remember"
 
 const formatMarkdown = (item: Item): string => {
+  const text = item.content.split("\n").join("\n\n")
   return `${item.title}
 
   ---
-  ${item.content}
+  ${text}
 `
 }
 
